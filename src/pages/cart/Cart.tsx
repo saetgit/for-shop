@@ -3,6 +3,8 @@ import CartItem from "../../components/cartItem/CartItem";
 import Button from "../../components/button/Button";
 
 function Cart() {
+  const [cartItems] = useContext(ShoppingCartContext);
+
   return (
     <div>
       <Container>
