@@ -4,15 +4,20 @@ import { useState } from "react";
 interface ShoppingCartProvider {
   children: React.ReactNode;
 }
-
-interface ShoppingCartContext {
-  cartItems: [];
+interface CartItem{
+    id:number,
+    qty:number
 }
-export const ShoppingCartContext = createContext<ShoppingCartContext>({
-  cartItems: [],
-});
+interface ShoppingCartContext {
+  cartItems: CartItem[]
+}
+export const ShoppingCartContext = createContext({} as ShoppingCartContext);
+
+export const useShoppingCartContext=()=>{
+    return useContext(ShoppingCartContext)
+}
 export function ShoppingCartProvider({ children }: ShoppingCartProvider) {
-  const [cartItems, setCartItems] = useState<[]>([]);
+  const [cartItems, setCartItems] = useState<CartItem[]>([]);
   return (
     <ShoppingCartContext.Provider value={{ cartItems }}>
       {children}
