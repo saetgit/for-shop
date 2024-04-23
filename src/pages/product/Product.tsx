@@ -28,7 +28,7 @@ function Product() {
                     <div className="bg-blue-400 col-span-2">
                         <img className="rounded" src="https://cdn.nody.ir/files/2021/10/15/nody-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D8%B9%DA%A9%D8%B3-%D8%B5%D9%81%D8%AD%D9%87-%D9%85%D9%88%D8%A8%D8%A7%DB%8C%D9%84-1634247622.jpg" />
                     </div>
-                    <Button onClick={()=>{alert("sara jooooooon")}} className="btn-info" >
+                    <Button variant="primary" onClick={()=>{alert("sara jooooooon")}} className="btn-info" >
                         Add to Cart
                     </Button>
                 </div>
